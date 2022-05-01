@@ -10,6 +10,12 @@ public class RemoveDuplicates {
 		removeDuplicate(x);
 	}
 
+	
+	/**
+	 * Takes in an array containing Integers and prints it without duplicates.
+	 * This is done without using Java Collection methods to get rid of duplicates. 
+	 * @param x
+	 */
 	private static void removeDuplicate(int[] x) {
 		
 		Arrays.asList(x);

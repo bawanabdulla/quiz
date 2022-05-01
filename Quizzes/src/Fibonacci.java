@@ -5,18 +5,23 @@ public class Fibonacci {
 		count(10);
 	}
 
-	public static void count(int x) {
+	/**
+	 * Counts the sum of Fibonacci's sequence for a number n.
+	 * The formula for Fibonacci's sequence is Xn+2 = Xn+1 + Xn. 
+	 * @param n
+	 */
+	public static void count(int n) {
 
-		if (x == 0) {
+		if (n == 0) {
 			System.out.println("0");
-		} else if (x == 1) {
+		} else if (n == 1) {
 			System.out.println("0, 1");
 		} else {
-			int[] arr = new int[x];
+			int[] arr = new int[n];
 			arr[0] = 0;
 			arr[1] = 1;
 
-			for (int i = 2; i < x; i++) {
+			for (int i = 2; i < n; i++) {
 				arr[i] = arr[i - 1] + arr[i - 2];
 			}
 

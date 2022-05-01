@@ -2,10 +2,21 @@
 public class Palindrome {
 	
 	public static void main(String[] args) {
-		System.out.println(isPal("hejjeh"));
+		System.out.println(isPalindrome("hejjeh"));
+		System.out.println(isPalindrome("hej"));
+		System.out.println(isPalindrome("bob"));
+		System.out.println(isPalindrome("Bob"));
+		
 	}
 
-	private static boolean isPal(String s) {
+	/**
+	 * Checks if a String is a palindrome. Palindrome is when the reversed string equals the original string. 
+	 * @param s
+	 * @return true if it is a palindrome, otherwise false. 
+	 */
+	private static boolean isPalindrome(String s) {
+		s = s.toLowerCase();
+		
 		char[] c = s.toCharArray();
 		String rev = "";
 		
@@ -13,7 +24,8 @@ public class Palindrome {
 			rev += c[i];
 		}
 		
-		System.out.println(s + ", " + rev + ": " + String.valueOf(c));
+		System.out.println(s + " : " + rev + " : " + String.valueOf(c));
+		
 		if(s.equals(rev)) {
 			return true;
 		} else {
